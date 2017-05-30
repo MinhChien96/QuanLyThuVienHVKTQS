@@ -1,0 +1,19 @@
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormDangNhap.resources
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.FormMenu.resources
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.DauSach_UserC.resources
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.DocGia_UserC.resources
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.PhieuMuon_UserC.resources
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.FormSach.resources
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.HuongDan_UserC.resources
+C:\Users\Chien\Documents\Visual Studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.DoiMK_UserC.resources
+C:\Users\Chien\Desktop\Thuctapnhom\Chiến\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+C:\Users\Chien\Desktop\Thuctapnhom\Chiến\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+C:\Users\Chien\Desktop\Thuctapnhom\Chiến\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
