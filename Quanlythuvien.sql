@@ -126,3 +126,102 @@ end
  where mahd=@mahd
  end
  
+  -----------phieu muon
+
+alter proc select_phieumuon
+ as
+ begin
+ select maphieu,D.sothe,tendg,ngaysinh,cmt,ngaymuon,ngaytra,matt
+ from DocGia D,PhieuMuonTra P
+ where D.sothe=P.sothe
+ end
+
+ create proc select_1docgia(@sothe varchar(10))
+ as
+ begin
+ select tendg,ngaysinh,cmt
+ from DocGia
+ where sothe=@sothe
+ end
+
+alter proc select_sach(@masach varchar(10))
+ as
+ begin
+ select macs,tensach,tacgia,nxb
+ from DauSach,CuonSach
+ where DauSach.masach=CuonSach.masach and CuonSach.macs=@masach
+ end
+  ---- xem ngay tra sach
+  create proc select_ngaytra(@sothe varchar(10))
+  as
+  begin
+  select ngaytra
+  from PhieuMuonTra
+  where sothe=@sothe
+  end
+
+  -----lay sach muon
+  alter proc select_sachmuon(@sothe varchar(10),@maphieu int)
+  as
+  begin
+  select s.macs,tensach,tacgia,nxb
+  from PhieuMuonTra p,ChiTietPhieuMuon c,CuonSach s,DauSach d
+  where p.sothe=@sothe and p.maphieu= c.maphieu and c.macs=s.macs and s.masach=d.masach and c.maphieu=@maphieu
+  end
+
+  create proc insert_phieumuon(@sothe varchar(10),@ngaymuon datetime,@ngaytra datetime,@matt varchar(10))
+  as
+  begin
+  insert PhieuMuonTra
+  values (@ngaymuon,@ngaytra,@sothe,@matt)
+  end
+  
+  create proc insert_chitietphieumuon(@maphieu int,@macs int)
+  as
+  begin
+  insert ChiTietPhieuMuon(macs,maphieu)
+  values (@macs,@maphieu)
+  end
+
+  create proc select_maphieu(@sothe varchar(10))
+  as
+  begin
+  select maphieu
+  from PhieuMuonTra
+  where sothe=@sothe
+  end
+
+alter proc update_phieumuon(@maphieu int,@sothe varchar(10),@ngaymuon datetime,@ngaytra datetime,@matt varchar(10))
+  as
+  begin
+  update PhieuMuonTra
+  set sothe=@sothe,ngaymuon=@ngaymuon,ngaytra=@ngaytra,matt=@matt
+  where maphieu=@maphieu
+  end
+
+  create proc delete_chitiet(@maphieu int)
+  as
+  begin
+  delete ChiTietPhieuMuon
+  where maphieu=@maphieu
+  end
+
+  create proc delete_phieumuon(@maphieu int)
+  as
+  begin
+  delete PhieuMuonTra
+  where maphieu=@maphieu
+  end
+
+  alter trigger xoachitietphieumuon on PhieuMuonTra instead of Delete
+ as
+ declare @maphieu int
+ begin
+ select @maphieu=maphieu from deleted
+ delete ChiTietPhieuMuon
+ where maphieu=@maphieu
+ delete PhieuMuonTra
+ where maphieu=@maphieu
+ end
+
+
