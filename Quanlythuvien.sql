@@ -224,4 +224,56 @@ alter proc update_phieumuon(@maphieu int,@sothe varchar(10),@ngaymuon datetime,@
  where maphieu=@maphieu
  end
 
+ 
+ ------------ lay thong tin doc gia
+ create proc select_docgia
+ as
+ begin
+ select *from docgia
+ end
+ ------ xoa doc gia
+ create proc delete_docgia(@sothe varchar(10))
+as
+begin
+delete DocGia
+where sothe=@sothe
+end
+
+ create trigger xoaphieumuon on DocGia instead of Delete
+ as
+ declare @sothe varchar(10)
+ begin
+ select @sothe=sothe from deleted
+ delete PhieuMuonTra
+ where sothe=@sothe
+ delete DocGia
+ where sothe=@sothe
+ end
+
+  create trigger xoachitietphieumuon on PhieuMuonTra instead of Delete
+ as
+ declare @maphieu varchar(10)
+ begin
+ select @maphieu=maphieu from deleted
+ delete ChiTietPhieuMuon
+ where maphieu=@maphieu
+ delete PhieuMuonTra
+ where maphieu=@maphieu
+ end
+ ----them doc gia
+
+ create proc insert_docgia(@sothe varchar(10),@tendg nvarchar(50),@ngaysinh datetime,@diachi nvarchar(50),@cmt varchar(13),@ngaylam datetime,@ngayhethan datetime)
+ as
+ begin
+ insert DocGia
+ values (@sothe,@tendg,@ngaysinh,@diachi,@cmt,@ngaylam,@ngayhethan)
+ end
+ --- sua doc gia 
+ create proc update_docgia(@sothe varchar(10),@tendg nvarchar(50),@ngaysinh datetime,@diachi nvarchar(50),@cmt varchar(13),@ngaylam datetime,@ngayhethan datetime)
+ as
+ begin update DocGia
+ set tendg=@tendg,ngaysinh=@ngaysinh,diachi=@diachi,cmt=@cmt,ngaylam=@ngaylam,ngayhethan=@ngayhethan
+ where sothe=@sothe
+ end
+
 
